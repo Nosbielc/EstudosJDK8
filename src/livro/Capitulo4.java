@@ -5,16 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Captulo4 {
+import static livro.Usuario.usuarios;
+
+public class Capitulo4 {
 
     public static void main(String[] args) {
 
-        Usuario user1 = new Usuario("Usuario 1", 100);
-        Usuario user2 = new Usuario("Usuario 2", 120);
-        Usuario user3 = new Usuario("Usuario 3", 140);
-        Usuario user4 = new Usuario("Usuario 4", 160);
-
-        List<Usuario> usuarios = Arrays.asList(user1, user2, user3, user4);
+        List<Usuario> usuarios = usuarios();
 
         ConsumerCaptulo4<Usuario> mostrarMensagem = usuario -> {
             System.out.println("Antes de imprimir os nomes");
@@ -35,16 +32,18 @@ public class Captulo4 {
             }
         };
 
-        List<Usuario> usuariosParaUsoDePredicados = new ArrayList<>();
-        usuariosParaUsoDePredicados.add(user1);
-        usuariosParaUsoDePredicados.add(user2);
-        usuariosParaUsoDePredicados.add(user3);
-        usuariosParaUsoDePredicados.add(user4);
+        List<Usuario> usuariosParaUsoDePredicados = usuarios();
 
         usuariosParaUsoDePredicados.removeIf(predicado);
         usuariosParaUsoDePredicados.forEach(usuario -> System.out.println(usuario));
 
-        
+        System.out.println("Exemplo 2 com predicados ");
+
+        List<Usuario> usuariosParaUsoDePredicados2 = usuarios();
+
+        usuariosParaUsoDePredicados2.removeIf(u -> u.getPontos() > 100);
+        usuariosParaUsoDePredicados2.forEach(usuario -> System.out.println(usuario));
+
     }
 
 }
