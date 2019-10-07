@@ -13,6 +13,10 @@ public class Usuario {
     public Usuario() {
     }
 
+    public Usuario(String nome) {
+        this.nome = nome;
+    }
+
     public Usuario(String nome, int pontos) {
         this.nome = nome;
         this.pontos = pontos;

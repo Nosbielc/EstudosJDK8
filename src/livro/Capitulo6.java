@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import static java.util.Comparator.comparing;
 import static livro.Usuario.usuarios;
@@ -71,6 +73,27 @@ public class Capitulo6 {
         usuarios.forEach(System.out::println);
         System.out.println(" ------ --------------------- ------ ");
 
+        System.out.println(" ------ Referenciando construtores ------ ");
+        Supplier<Usuario> usuarioSupplier = Usuario::new;
+        Usuario novoUsuario = usuarioSupplier.get();
+        System.out.println(novoUsuario);
+        System.out.println(" ------ --------------------- ------ ");
+
+        System.out.println(" ------ Referenciando construtores com argumentos ------ ");
+        Function<String, Usuario> usuarioFunction = Usuario::new;
+        Usuario joao = usuarioFunction.apply("João");
+        Usuario maria = usuarioFunction.apply("Maria");
+        System.out.println(joao);
+        System.out.println(maria);
+        System.out.println(" ------ --------------------- ------ ");
+
+        System.out.println(" ------ (BiFunction) Referenciando construtores com argumentos ------ ");
+        BiFunction<String, Integer, Usuario> usuarioFunction2 = Usuario::new;
+        Usuario joao2 = usuarioFunction2.apply("João", 100);
+        Usuario maria2 = usuarioFunction2.apply("Maria", 200);
+        System.out.println(joao2);
+        System.out.println(maria2);
+        System.out.println(" ------ --------------------- ------ ");
     }
 
 
