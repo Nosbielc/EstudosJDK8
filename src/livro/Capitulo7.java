@@ -21,13 +21,22 @@ public class Capitulo7 {
         usuarios.forEach(System.out::println);
         System.out.println(" ------ --------------------- ------ ");
 
-        System.out.println(" ------ coleção simples ------ ");
+        System.out.println(" ------ Sublist ------ ");
         usuarios.sort(Comparator.comparingInt(Usuario::getPontos).reversed());
-        usuarios.subList(0, 10)
+        usuarios.subList(0, 2)
                 .forEach(Usuario::tornaModerador);
         usuarios.forEach(System.out::println);
         System.out.println(" ------ --------------------- ------ ");
 
+        usuarios = Util.shift(usuarios, Boolean.TRUE);
+
+        System.out.println(" ------ Media ------ ");
+        double pontuacaoMedia = usuarios.stream()
+                .mapToInt(Usuario::getPontos)
+                .average()
+                .getAsDouble();
+        System.out.println("Media da lista: " + pontuacaoMedia);
+        System.out.println(" ------ --------------------- ------ ");
 
     }
 
