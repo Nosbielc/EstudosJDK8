@@ -2,6 +2,7 @@ package livro;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.StringJoiner;
 
 public class Usuario {
@@ -53,10 +54,10 @@ public class Usuario {
     }
 
     public static List<Usuario> usuarios() {
-        Usuario user1 = new Usuario("Primeiro", 100);
-        Usuario user2 = new Usuario("Segundo", 120);
-        Usuario user3 = new Usuario("Terceiro", 140);
-        Usuario user4 = new Usuario("Quarto", 160);
+        Usuario user1 = new Usuario("Primeiro", new Random().ints(50, (17323 + 1)).limit(1).findFirst().getAsInt());
+        Usuario user2 = new Usuario("Segundo", new Random().ints(23, (1563 + 1)).limit(1).findFirst().getAsInt());
+        Usuario user3 = new Usuario("Terceiro", new Random().ints(22, (179923 + 1)).limit(1).findFirst().getAsInt());
+        Usuario user4 = new Usuario("Quarto", new Random().ints(1, (98700 + 1)).limit(1).findFirst().getAsInt());
 
         return Arrays.asList(user1, user2, user3, user4);
     }
