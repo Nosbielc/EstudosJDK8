@@ -1,15 +1,12 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
-import util.Util;
+import com.nosbielc.estudos.jdk8.util.Util;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 import static java.util.Comparator.comparing;
-import static livro.Usuario.usuarios;
+import static com.nosbielc.estudos.jdk8.livro.Usuario.usuarios;
 
 public class Capitulo7 {
 

@@ -1,7 +1,6 @@
-package util;
+package com.nosbielc.estudos.jdk8.util;
 
-import com.sun.istack.internal.NotNull;
-import livro.Usuario;
+import com.nosbielc.estudos.jdk8.livro.Usuario;
 
 import java.util.Collections;
 import java.util.List;

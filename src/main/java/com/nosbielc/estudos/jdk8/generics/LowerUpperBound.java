@@ -1,4 +1,4 @@
-package generics;
+package com.nosbielc.estudos.jdk8.generics;
 
 import java.util.ArrayList;
 import java.util.Collection;

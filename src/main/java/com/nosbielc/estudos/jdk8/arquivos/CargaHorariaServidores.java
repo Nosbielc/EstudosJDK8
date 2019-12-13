@@ -1,4 +1,4 @@
-package arquivos;
+package com.nosbielc.estudos.jdk8.arquivos;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
 @FunctionalInterface
 public interface Validador<T> {

@@ -1,11 +1,11 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import static livro.Usuario.usuarios;
+import static com.nosbielc.estudos.jdk8.livro.Usuario.usuarios;
 
 public class Capitulo5 {
 

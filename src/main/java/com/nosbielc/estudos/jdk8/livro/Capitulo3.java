@@ -1,4 +1,4 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
 public class Capitulo3 {
 

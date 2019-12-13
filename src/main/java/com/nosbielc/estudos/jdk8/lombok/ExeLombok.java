@@ -1,4 +1,4 @@
-package lombok;
+package com.nosbielc.estudos.jdk8.lombok;
 
 import java.util.Objects;
 

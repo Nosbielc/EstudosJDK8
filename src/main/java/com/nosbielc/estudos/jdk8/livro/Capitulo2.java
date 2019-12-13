@@ -1,10 +1,9 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-import static livro.Usuario.usuarios;
+import static com.nosbielc.estudos.jdk8.livro.Usuario.usuarios;
 
 public class Capitulo2 {
 

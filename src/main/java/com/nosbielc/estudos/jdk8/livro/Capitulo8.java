@@ -1,11 +1,11 @@
-package livro;
+package com.nosbielc.estudos.jdk8.livro;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.IntBinaryOperator;
 
-import static livro.Usuario.usuarios;
+import static com.nosbielc.estudos.jdk8.livro.Usuario.usuarios;
 
 public class Capitulo8 {
 
