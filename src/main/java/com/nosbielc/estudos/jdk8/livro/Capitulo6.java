@@ -2,6 +2,7 @@ package com.nosbielc.estudos.jdk8.livro;
 
 import com.nosbielc.estudos.jdk8.util.Util;
 
+import java.io.BufferedReader;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.BiFunction;
