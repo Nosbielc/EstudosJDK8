@@ -20,6 +20,13 @@ public class Capitulo8 {
 
         System.out.println("Media : " + pontuacaoMedia);
 
+        double pontuacaoMedia2 = usuarios.stream()
+                .mapToInt(Usuario::getPontos)
+                .average()
+                .orElse(0);
+
+        System.out.println("Media 2: " + pontuacaoMedia2);
+
         Optional<Usuario> max = usuarios.stream()
                 .max(Comparator.comparing(Usuario::getPontos));
         Usuario maximaPontuacao = max.get();
